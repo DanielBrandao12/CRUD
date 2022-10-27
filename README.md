@@ -1,4 +1,4 @@
-# CRUD
+# CRUD (Projeto em desenvolvimento)
 
 Projeto criado durante meus estudos, crud simples com 3 campos e um botão para adicionar a lista de nomes cadastrados, na lista é possível editar ou excluir qualquer dado adicionado.
 
