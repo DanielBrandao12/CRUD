@@ -5,9 +5,10 @@
     <link rel='stylesheet' href='stylesheets/style.css' />
   </head>
   <body>
-    <h1>CRUD</h1>
+    <div class="container-list">
     <form action="" method="post">
-      <div>
+      <h1>Cadastrar Nome</h1>
+      <div class="add">
         <input type="text" name="nome" placeholder="Nome" id="name">
         <input type="text" name="sobrenome" placeholder="Sobrenone" id="last-name">
         <input type="email" name="email" placeholder="E-mail" id="email">  
@@ -15,17 +16,24 @@
         <button>Adicionar</button>    
       </div>
     </form>
-    <form action="">
-      
-      <%for(let user of users){%>
-        <div>
+  </div>
+    <div class="container-list">
+      <h1>Lista de Nomes</h1>
+    
+   
+      <form action="">
+        <%for(let user of users){%>
+        <div id="select">
           <input type="text" name="nome" value="<%=user.nome%>">
           <input type="text" name="sobrenome" value="<%=user.sobrenome%>">
           <input type="text" name="email" value="<%=user.email%>">
           <button>Editar</button>
           <button>Excluir</button>
+          
         </div>
-          <%}%>
-    </form>
-  </body>
+        <%}%>
+      </form>
+    </div>
+    </body>
+    <script src="javascripts/index.js"></script>
 </html>
