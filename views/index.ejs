@@ -21,18 +21,18 @@
       <h1>Lista de Nomes</h1>
     
    
-      <form action="">
-        <%for(let user of users){%>
+      <%for(let user of users){%>
+      <form method="post" action="/:user/?_method=PUT">
         <div id="select">
           <input type="text" name="nome" value="<%=user.nome%>">
           <input type="text" name="sobrenome" value="<%=user.sobrenome%>">
           <input type="text" name="email" value="<%=user.email%>">
-          <button>Editar</button>
-          <button>Excluir</button>
+          <button >Editar</button>
+          <button >Excluir</button>
           
         </div>
-        <%}%>
       </form>
+      <%}%>
     </div>
     </body>
     <script src="javascripts/index.js"></script>

@@ -4,7 +4,7 @@ function index(req, res) {
     const users = usersModels.getAll()
     res.render('index',{users})
   };
-
+  
   function createUser(req, res) {
     const { nome,sobrenome, email } = req.body
     
@@ -13,5 +13,13 @@ function index(req, res) {
   
   }
 
+  function updateUser(req, res){
 
-  module.exports ={index, createUser};
+    usersModels.update(req.body.nome,req.body.sobrenome, req.body.email)
+    console.log(req.body)
+    return res.redirect("/")
+    
+  }
+
+
+  module.exports ={index, createUser,updateUser};

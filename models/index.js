@@ -23,7 +23,19 @@ function getAll() {
       )
   );
 }
+function getById(id) {
+  const listId = getAll();
+  return listId[id];
+}
+function update(nome, sobrenome, email){
+ 
+  const user = getAll()
 
+  user.nome = nome
+  user.sobrenome =sobrenome
+  user.email =email
+  fs.writeFileSync("database/bd.json.json", JSON.stringify(user));
+}
 //função que vai receber os dados e salvar na minha lista
 function create(nome,sobrenome, email) {
   const newUser = new User(nome,sobrenome, email);
@@ -35,4 +47,6 @@ function create(nome,sobrenome, email) {
 module.exports = {
   getAll,
   create,
+  getById,
+  update,
 }
