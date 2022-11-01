@@ -22,7 +22,7 @@
     
    
       <%for(let user of users){%>
-      <form method="post" action="/:user/?_method=PUT">
+      <form method="post" action="/?_method=PUT">
         <div id="select">
           <input type="text" name="nome" value="<%=user.nome%>">
           <input type="text" name="sobrenome" value="<%=user.sobrenome%>">

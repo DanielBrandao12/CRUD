@@ -27,14 +27,17 @@ function getById(id) {
   const listId = getAll();
   return listId[id];
 }
-function update(nome, sobrenome, email){
+function update(id,nome, sobrenome, email){
  
   const user = getAll()
-
+  
+  // Alterar o imóvel que possui o index = id
+ console.log(user[id])
+ 
   user.nome = nome
   user.sobrenome =sobrenome
   user.email =email
-  fs.writeFileSync("database/bd.json.json", JSON.stringify(user));
+  fs.writeFileSync("database/bd.json", JSON.stringify(user));
 }
 //função que vai receber os dados e salvar na minha lista
 function create(nome,sobrenome, email) {

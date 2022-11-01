@@ -2,6 +2,7 @@ const usersModels = require('../models/index')
 
 function index(req, res) {
     const users = usersModels.getAll()
+    //console.log(users)
     res.render('index',{users})
   };
   
@@ -15,8 +16,9 @@ function index(req, res) {
 
   function updateUser(req, res){
 
-    usersModels.update(req.body.nome,req.body.sobrenome, req.body.email)
-    console.log(req.body)
+    const users = req.body
+    usersModels.update(0,users.nome,users.sobrenome, users.email)
+   console.log(users)
     return res.redirect("/")
     
   }
