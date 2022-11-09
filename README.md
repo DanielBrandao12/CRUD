@@ -19,7 +19,7 @@ De que coisas você precisa para instalar o software e como instalá-lo?
 
 ### 🔧 Instalação
 
-Usando o git clone o projeto em sua máquina.
+Usando o git, clone o projeto em sua máquina.
 Abra o projeto utilizando o visual code ou a IDE de sua escolha.
 Utilizando o visual code abra um terminal novo e digite npm install para a instalação dos pacotes do node.
 
