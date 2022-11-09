@@ -32,7 +32,7 @@ function update(id,nome, sobrenome, email){
   const user = getAll()
   
   // Alterar o imóvel que possui o index = id
- console.log(user[id])
+ //console.log(user[id])
  
   user.nome = nome
   user.sobrenome =sobrenome

@@ -3,6 +3,7 @@
   <head>
     <title>CRUD</title>
     <link rel='stylesheet' href='stylesheets/style.css' />
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
   </head>
   <body>
     <div class="container-list">
@@ -13,7 +14,7 @@
         <input type="text" name="sobrenome" placeholder="Sobrenone" id="last-name">
         <input type="email" name="email" placeholder="E-mail" id="email">  
 
-        <button>Adicionar</button>    
+        <button class="button">Adicionar</button>    
       </div>
     </form>
   </div>
@@ -21,18 +22,35 @@
       <h1>Lista de Nomes</h1>
     
    
-      <%for(let user of users){%>
       <form method="post" action="/?_method=PUT">
         <div id="select">
-          <input type="text" name="nome" value="<%=user.nome%>">
-          <input type="text" name="sobrenome" value="<%=user.sobrenome%>">
-          <input type="text" name="email" value="<%=user.email%>">
-          <button >Editar</button>
-          <button >Excluir</button>
+          
+          <table>
+            <thead>
+              <tr>
+                <th>Nome</th>
+                <th>Sobrenome</th>
+                <th>E-mail</th>
+                <th class="acao">Editar</th>
+                <th class="acao">Excluir</th>
+              </tr>
+            </thead>
+            <%for(let user of users){%>
+          <tbody>
+            <tr>
+              <td><%=user.nome%></td>
+                <td><%=user.sobrenome%></td>
+                <td><%=user.email%></td>
+                <th><i class='bx bx-edit' ></i></th> 
+                <th><i class='bx bx-trash'></i></th>
+            </tr>
+              
+          </tbody>
+          <%}%>
+        </table>
           
         </div>
       </form>
-      <%}%>
     </div>
     </body>
     <script src="javascripts/index.js"></script>

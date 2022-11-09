@@ -7,7 +7,8 @@ function index(req, res) {
   };
   
   function createUser(req, res) {
-    const { nome,sobrenome, email } = req.body
+    
+    const {nome,sobrenome, email } = req.body
     
     usersModels.create( nome,sobrenome, email)
     return res.redirect("/");
@@ -18,7 +19,7 @@ function index(req, res) {
 
     const users = req.body
     usersModels.update(0,users.nome,users.sobrenome, users.email)
-   console.log(users)
+   //console.log(users)
     return res.redirect("/")
     
   }

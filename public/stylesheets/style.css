@@ -25,7 +25,7 @@ form div{
 
 .container-list {
   
-  border: 1px solid green;
+  border: 1px solid #008000;
   margin: 20px 0;
   padding: 20px;
 }
@@ -46,8 +46,17 @@ input{
   font-size: 16px;
   outline:none;
 }
+tr{
+  border: none;
+  border-bottom: 1px solid #008000;
+ 
+  margin: 10px ;
+  width: 300px;
+  font-size: 16px;
+  
+}
 
-button{
+.button{
   background-color: #008000;
   border: none;
   color: #ffffff;
@@ -59,6 +68,48 @@ button{
 }
 
 
+table {
+  width: 100%;
+  border-spacing: 10px;
+  word-break: break-all;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: #008000;
+}
+
+tr {
+  border-bottom: 1px solid #008000 !important;
+}
+
+tbody tr td {
+  vertical-align: text-top;
+  padding: 6px;
+  max-width: 50px;
+}
+
+thead tr th {
+  padding: 5px;
+  text-align: start;
+  margin-bottom: 50px;
+}
+
+tbody tr {
+  margin-bottom: 50px;
+}
+
+thead tr th.acao {
+  width: 100px!important;
+  text-align: center;
+}
+
+
+
+th i {
+  font-size: 25px;
+  text-align: center;
+}
 
 
 
